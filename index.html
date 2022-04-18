@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Covid-19 portal</title>
+  </head>
+  <body>
+    
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5000/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.worldometers.info/coronavirus/country/india/">Current Cases In India</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://dashboard.cowin.gov.in/">Vaccination Status in India</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://selfregistration.cowin.gov.in/">Book Vaccination Slots</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://maps.mapmyindia.com/place-Vaccination+Centre-near-me?@zdata=MjguNTc5Mzk3Kzc3LjIyOTQyNCsxMisrVmFjY2luYXRpb24gQ2VudHJlK2VsKyw=ed">Vaccination Centres Near Me</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.mohfw.gov.in/">For FAQ and More Info</a>
+      </li>
+    </ul>
+        <div class="container">
+          <h2 class = "text-center">COVID Probability Detector</h2>
+          <p class="text-center">Welcome</p>
+          <p class="tect-center">Please provide us data to calculate probability of infection</p>
+          <form action="/" method="POST">
+          <div class="mb-3">
+              <label for="fever" class="form-label"> Enter Temperature of the patient</label>
+              <input type="number" class="form-control" id="fever" name="fever" placeholder="Enter Temperature value">
+            </div>
+            <div class="mb-3">
+              <label for="age" class="form-label">Enter Age value of the patient</label>
+              <input type="number" class="form-control" id="age" name= "age" placeholder="Enter Age">
+            </div>
+
+              <div class="mb-3">
+                  <label for="Body Pain" class="form-label">Is the patient suffering from body pain?</label>
+                  <select custom-select class= "form-control" name= "pain" id="pain">
+                      <Option value="0">Heavy Pain</Option>
+                      <option value="1">No Pain</option>
+                  </select>
+              </div>
+              <div class="mb-3">
+                  <label for="runnyNose" class="form-label">Is the patient suffering from Running Nose?</label>
+                  <select custom-select class= "form-control" name="runnyNose" id="runnyNose">
+                      <Option value="0">Yes</Option>
+                      <option value="1">No</option>
+                  </select>
+              <div>
+              <div class="mb-3">
+                  <label for="diffBreathe" class="form-label">Is the patient having difficulty in breathing?</label>
+                  <select custom-select class= "form-control" name = "diffBreathe" id="diffBreathe">
+                      <Option value="1">Severe difficulty</Option>
+                      <Option value="0">Moderate difficulty</Option>
+                      <option value="-1">No difficulty</option>
+                  </select>
+              <div>
+            </div>
+            <button class="btn btn-primary">Submit</button>
+          </form>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  </body>
+</html>
